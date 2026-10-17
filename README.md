@@ -1,11 +1,14 @@
-# BinaryQva Official Website (v1.0.0)
+# BinaryQva™ — Estudio e Iniciativa Open Source
 
-Sitio Web Oficial de **BinaryQva**, desarrollado como un **Static Site** optimizado para su despliegue en Render.
+BinaryQva™ es un estudio e iniciativa independiente de software libre que funciona como ecosistema y comunidad de proyectos, actualmente como organización informal.
 
-## 🚀 Características
-- **Identidad Institucional**: Presentación de BinaryQva como grupo de innovación y software educativo en Cuba.
-- **Catálogo de Proyectos**: Presentación de la plataforma PreuSync (App Android, API REST y Panel Admin Web).
-- **Diseño Adaptativo**: Paleta elegante en tonos morados y azules oscuros con HTML5, Tailwind CSS y Lucide Icons.
+## 👥 Jerarquía de Proyectos
+- **Titular Legal del Copyright**: Daniel Alejandro Pupo González
+- **Alias Público**: JiroxDEV
+- **Estudio / Ecosistema**: BinaryQva™
+- **Primer Proyecto Principal**: PreuSync™
 
-## 📄 Licencia
-Este proyecto está bajo la Licencia **GNU Affero General Public License v3 (AGPLv3)**.
+## ⚖️ Aviso Legal de Copyright
+© 2026 Daniel Alejandro Pupo González (JiroxDEV). PreuSync™ es un proyecto de BinaryQva™.
+
+Licencia bajo la **GNU Affero General Public License v3 (AGPLv3)**.
