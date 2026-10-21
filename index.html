@@ -1,272 +1,114 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BinaryQva™ | Estudio e Iniciativa Open Source</title>
-  <meta name="description" content="BinaryQva™ es un estudio e iniciativa independiente de software libre que funciona como ecosistema y comunidad de proyectos, creado por Daniel Alejandro Pupo González (JiroxDEV).">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b5cf6'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .bg-deep-blue { background-color: #080C19; }
-    .bg-card-blue { background-color: #0F172A; }
-    .bg-card-hover:hover { background-color: #141E36; }
-    .gradient-purple-text {
-      background: linear-gradient(135deg, #A855F7 0%, #8B5CF6 50%, #38BDF8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gradient-purple-bg {
-      background: linear-gradient(135deg, #7C3AED 0%, #6366F1 50%, #0284C7 100%);
-    }
-    .border-subtle { border-color: rgba(139, 92, 246, 0.15); }
-    .glow-purple { box-shadow: 0 0 60px -15px rgba(139, 92, 246, 0.25); }
-  </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BinaryQva™ — Estudio e iniciativa de software libre</title>
+     <meta name="description" content="BinaryQva™ es un estudio e iniciativa de software libre enfocado en la informatización de Cuba y el mundo.">
+     <script>
+          (function () {
+               const savedTheme = localStorage.getItem('theme');
+               const systemPrefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+               if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+               } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+               }
+          })();
+     </script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+     <!-- Rutas relativas corregidas -->
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96"/>
+     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg"/>
+     <link rel="shortcut icon" href="favicon/favicon.ico"/>
+     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/>
+     <meta name="apple-mobile-web-app-title" content="BinaryQva"/>
+     <link rel="manifest" href="favicon/site.webmanifest"/>
 </head>
-<body class="bg-deep-blue text-slate-100 antialiased selection:bg-purple-500 selection:text-white">
-
-  <!-- Header / NAVEGACIÓN -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-deep-blue/90 backdrop-blur-md border-b border-subtle">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl gradient-purple-bg flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-purple-500/20">
-          BQ
-        </div>
-        <span class="font-extrabold text-xl tracking-tight text-white">BinaryQva™</span>
-      </div>
-
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-        <a href="#about" class="hover:text-purple-400 transition-colors">Quiénes Somos</a>
-        <a href="#projects" class="hover:text-purple-400 transition-colors">Proyectos</a>
-        <a href="#values" class="hover:text-purple-400 transition-colors">Nuestros Valores</a>
-        <a href="#contact" class="hover:text-purple-400 transition-colors">Contacto</a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <a href="https://github.com/JiroxDEV" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-card-blue hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-subtle transition-all">
-          <i data-lucide="github" class="w-4 h-4 text-purple-400"></i>
-          JiroxDEV en GitHub
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="about" class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center relative overflow-hidden">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-indigo-600/15 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-950/80 border border-purple-800/80 text-purple-300 text-xs font-bold mb-8">
-      <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
-      Estudio e Iniciativa Open Source • Ecosistema y Comunidad
-    </div>
-
-    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
-      BinaryQva™ — <span class="gradient-purple-text">Ecosistema de Software Libre</span>
-    </h1>
-
-    <p class="mt-6 text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
-      <strong>BinaryQva™</strong> es un estudio e iniciativa independiente de software libre que funciona como ecosistema y comunidad de proyectos, creado por <strong>Daniel Alejandro Pupo González</strong>, conocido como <strong>JiroxDEV</strong>.
-    </p>
-
-    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl gradient-purple-bg hover:opacity-95 text-white font-bold text-base shadow-xl shadow-purple-600/30 transition-all">
-        <i data-lucide="sparkles" class="w-5 h-5"></i>
-        Conocer PreuSync™ y Proyectos
-      </a>
-      <a href="#values" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-card-blue hover:bg-slate-800 text-slate-200 font-semibold text-base border border-subtle transition-all">
-        <i data-lucide="heart" class="w-5 h-5 text-purple-400"></i>
-        Nuestra Misión
-      </a>
-    </div>
-  </section>
-
-  <!-- SECCIÓN PROYECTOS DESTACADOS -->
-  <section id="projects" class="py-24 border-t border-subtle bg-slate-950/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Lo que Construimos</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">Proyectos del Ecosistema</h2>
-        <p class="mt-3 text-sm text-slate-400">Software abierto diseñado con enfoque comunitario y educativo en Cuba.</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- PreuSync Project Card -->
-        <div class="p-8 sm:p-10 rounded-3xl bg-card-blue border border-subtle bg-card-hover transition-all space-y-6 flex flex-col justify-between shadow-xl glow-purple">
-          <div class="space-y-5">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-2xl">
-                  P
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold text-white">PreuSync™</h3>
-                  <p class="text-xs text-purple-300 font-semibold">Primer Proyecto Principal de BinaryQva™</p>
-                </div>
-              </div>
-              <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-800">
-                En Vivo
-              </span>
-            </div>
-
-            <p class="text-sm text-slate-300 leading-relaxed font-normal">
-              Plataforma integral para la comunidad escolar preuniversitaria en Cuba. Permite a los estudiantes y profesores consultar su horario de clases actualizado al instante, participar en debates comunitarios, leer noticias destacadas y revisar las efemérides del día.
-            </p>
-
-            <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
-              <div class="p-3.5 rounded-2xl bg-deep-blue border border-subtle">
-                <span class="text-purple-400 font-bold block mb-0.5">📅 Horario Dinámico</span>
-                <span class="text-slate-400 text-[11px]">Resalta la clase activa en vivo</span>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-deep-blue border border-subtle">
-                <span class="text-purple-400 font-bold block mb-0.5">💬 Comunidad</span>
-                <span class="text-slate-400 text-[11px]">Preguntas, debates y encuestas</span>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-deep-blue border border-subtle">
-                <span class="text-purple-400 font-bold block mb-0.5">📰 Agenda Escolar</span>
-                <span class="text-slate-400 text-[11px]">Noticias y eventos del instituto</span>
-              </div>
-              <div class="p-3.5 rounded-2xl bg-deep-blue border border-subtle">
-                <span class="text-purple-400 font-bold block mb-0.5">🚀 Ahorro de Datos</span>
-                <span class="text-slate-400 text-[11px]">Funciona veloz con poco internet</span>
-              </div>
-            </div>
+<body>
+     <header id="header">
+          <div class="nav-container"> <a href="#" class="brand"> <img src="img/logo-landscape.png" alt="BinaryQva Logo"> </a>
+               <div class="nav-actions"> <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"> <svg class="icon sun-icon"><use href="img/icons.svg#icon-sun"></use></svg> <svg class="icon moon-icon"><use href="img/icons.svg#icon-moon"></use></svg> </button> <button class="hamburger" id="hamburger" aria-label="Abrir menú"> <svg class="icon"><use href="img/icons.svg#icon-menu"></use></svg> </button>
+               </div>
+               <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#philo">Filosofía</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#mision">Nuestra misión</a></li>
+                    <li><a href="#collaborate">Colabora</a></li>
+               </ul>
           </div>
-
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-subtle">
-            <div class="flex items-center gap-3">
-              <a href="https://github.com/JiroxDEV/preusync-android/releases/latest" target="_blank" class="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs transition-all flex items-center gap-2 shadow-lg shadow-sky-600/20">
-                <i data-lucide="download" class="w-4 h-4"></i>
-                Descargar APK
-              </a>
-              <a href="https://preusync-admin.onrender.com" target="_blank" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-subtle transition-all flex items-center gap-2">
-                <i data-lucide="shield" class="w-4 h-4 text-purple-400"></i>
-                Panel Admin
-              </a>
-            </div>
-            <span class="text-xs text-slate-400 font-medium">GNU AGPLv3</span>
+     </header>
+     <section class="home" id="home">
+          <h1 class="fade-in">Desarrollado en Cuba, <br><span class="gradient-text">destinado para el mundo.</span></h1>
+          <div class="home-typing fade-in"> <span id="typing-text"></span><span class="cursor"></span>
           </div>
-        </div>
-
-        <!-- BinaryQva Apps Card -->
-        <div class="p-8 sm:p-10 rounded-3xl bg-card-blue border border-subtle bg-card-hover transition-all space-y-6 flex flex-col justify-between shadow-xl">
-          <div class="space-y-5">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 rounded-2xl gradient-purple-bg flex items-center justify-center text-white font-bold text-2xl">
-                  BQ
-                </div>
-                <div>
-                  <h3 class="text-2xl font-bold text-white">Ecosistema Abierto</h3>
-                  <p class="text-xs text-purple-300 font-semibold">Iniciativa Creada por JiroxDEV</p>
-                </div>
-              </div>
-              <span class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-purple-950 text-purple-300 border border-purple-800">
-                Open Source
-              </span>
-            </div>
-
-            <p class="text-sm text-slate-300 leading-relaxed font-normal">
-              Desarrollamos soluciones móviles y web enfocadas en simplificar tareas cotidianas, organizar información escolar y facilitar el acceso a recursos de aprendizaje sin barreras técnicas.
-            </p>
-
-            <div class="space-y-3 pt-2 text-xs">
-              <div class="p-3.5 rounded-2xl bg-deep-blue border border-subtle flex items-start gap-3">
-                <i data-lucide="shield-check" class="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5"></i>
-                <div>
-                  <h4 class="font-bold text-white">Privacidad y Transparencia</h4>
-                  <p class="text-slate-400 text-[11px] mt-0.5">Sin anuncios molestos ni recolección indebida de datos personales.</p>
-                </div>
-              </div>
-
-              <div class="p-3.5 rounded-2xl bg-deep-blue border border-subtle flex items-start gap-3">
-                <i data-lucide="zap" class="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5"></i>
-                <div>
-                  <h4 class="font-bold text-white">Velocidad e Interfaz Fluida</h4>
-                  <p class="text-slate-400 text-[11px] mt-0.5">Diseño intuitivo que abre en un segundo y responde de forma instantánea.</p>
-                </div>
-              </div>
-            </div>
+          <div class="btn-group fade-in"> <a href="#projects" class="btn btn-primary">Descubre lo que construimos</a> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explora nuestro código</a>
           </div>
-
-          <div class="flex items-center justify-between pt-6 border-t border-subtle">
-            <a href="https://github.com/JiroxDEV" target="_blank" class="px-5 py-2.5 rounded-xl gradient-purple-bg hover:opacity-95 text-white font-bold text-xs transition-all flex items-center gap-2 shadow-lg shadow-purple-600/20">
-              <i data-lucide="github" class="w-4 h-4"></i>
-              Ver Repositorios en GitHub
-            </a>
-            <span class="text-xs text-slate-400 font-medium">Licencia AGPLv3</span>
+     </section>
+     <section class="section-container" id="projects">
+          <h2 class="section-title fade-in">Proyectos</h2>
+          <div class="grid">
+               <div class="card fade-in">
+                    <h3>PreuSync™ <span class="badge badge-beta">Beta</span></h3>
+                    <p>Nuestra primera herramienta. Diseñada para resolver las necesidades de los preuniversitarios de toda Cuba con un enfoque en rendimiento, privacidad y código abierto, optimizada para dispositivos de gama baja y mala conexión a Internet.</p> <a href="https://preusync.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-card"> Leer más <svg class="icon"><use href="img/icons.svg#icon-arrow-right"></use></svg> </a>
+               </div>
+               <div class="card fade-in" style="opacity: 0.8;">
+                    <h3>Más Proyectos <span class="badge">En desarrollo</span></h3>
+                    <p>Estamos trabajando en nuevas herramientas para expandir nuestro ecosistema. Mantente atento a nuestro GitHub.</p> <span class="coming-soon-text">Más proyectos próximamente...</span>
+               </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- NUESTROS VALORES -->
-  <section id="values" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <span class="text-xs font-bold text-purple-400 uppercase tracking-widest">Lo que nos Mueve</span>
-      <h2 class="text-3xl font-bold text-white tracking-tight mt-2">Nuestros Pilares Fundamentales</h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 rounded-3xl bg-card-blue border border-subtle space-y-3">
-        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-4">
-          <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Enfoque Educativo</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Proyectos diseñados para apoyar a estudiantes, profesores e institutos de todo el país.</p>
-      </div>
-
-      <div class="p-6 rounded-3xl bg-card-blue border border-subtle space-y-3">
-        <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4">
-          <i data-lucide="wifi" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Ahorro de Datos</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Aplicaciones optimizadas para consumir el mínimo de internet móvil y funcionar velozmente.</p>
-      </div>
-
-      <div class="p-6 rounded-3xl bg-card-blue border border-subtle space-y-3">
-        <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center mb-4">
-          <i data-lucide="code-2" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Software Libre</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Proyectos transparentes de código abierto que garantizan la libertad del usuario.</p>
-      </div>
-
-      <div class="p-6 rounded-3xl bg-card-blue border border-subtle space-y-3">
-        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center mb-4">
-          <i data-lucide="heart-handshake" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Impacto Social</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Crear tecnología comunitaria accesible, útil y 100% gratuita para todos.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER CON AVISO LEGAL OFICIAL -->
-  <footer id="contact" class="border-t border-subtle bg-slate-950 py-12 text-slate-400 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-xl gradient-purple-bg flex items-center justify-center text-white font-bold text-sm">BQ</div>
-        <span class="font-bold text-sm text-white">BinaryQva™</span>
-        <span class="text-slate-400">© 2026 Daniel Alejandro Pupo González (JiroxDEV). PreuSync™ es un proyecto de BinaryQva™.</span>
-      </div>
-
-      <div class="flex items-center gap-6 font-medium">
-        <a href="https://github.com/JiroxDEV" target="_blank" class="hover:text-purple-400 transition-colors">GitHub (JiroxDEV)</a>
-        <a href="mailto:jiroxdev@preusync.com" class="hover:text-purple-400 transition-colors">Contacto por Correo</a>
-        <span class="text-slate-500">Licencia GNU AGPLv3</span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    if (window.lucide) window.lucide.createIcons();
-  </script>
+     </section>
+     <section class="section-container" id="philo">
+          <h2 class="section-title fade-in">Nuestra Filosofía</h2>
+          <div class="philo-grid fade-in">
+               <div class="philo-item">
+                    <h3>Privacidad por Diseño</h3>
+                    <p>Tus datos son tuyos. Construimos herramientas donde la seguridad y el cifrado no son un extra, sino son una base.</p>
+               </div>
+               <div class="philo-item">
+                    <h3>Soberanía Tecnológica</h3>
+                    <p>Creemos en la independencia digital. Buscamos que las personas y las instituciones no dependan de los grandes monopolios.</p>
+               </div>
+               <div class="philo-item">
+                    <h3>Acceso Universal</h3>
+                    <p>Optimizado para funcionar donde otros fallan. Diseñamos pensando en conexiones lentas y recursos de hardware limitados.</p>
+               </div>
+          </div>
+     </section>
+     <section class="section-container" id="about">
+          <h2 class="section-title fade-in">Sobre Nosotros</h2>
+          <div class="text-container fade-in">
+               <p class="about-text"> <strong>BinaryQva™</strong> es un estudio e iniciativa de software libre que opera actualmente como organización informal. Es creada y mantenida actualmente solo por JiroxDEV y los colaboradores de la iniciativa o de sus proyectos derivados. </p>
+          </div>
+     </section>
+     <section class="section-container" id="mision">
+          <h2 class="section-title fade-in">Nuestra Misión</h2>
+          <div class="text-container fade-in">
+               <p class="mision-text"> <strong>BinaryQva™</strong> nace con el objetivo claro de fomentar la informatización y digitalización de la vida cubana, acercando la tecnología a todos. </p>
+               <p class="mision-text"> Sin embargo, nuestros cimientos son universales. Creemos en el código abierto como un puente sin fronteras. Por eso, construimos soluciones que resuelven los retos locales, pero con una arquitectura y filosofía globales, listas para ser adoptadas por cualquier persona en el mundo. </p>
+          </div>
+     </section>
+     <section class="section-container" id="collaborate">
+          <div class="collaborate-box fade-in">
+               <h2>Únete a la iniciativa</h2>
+               <p>El código abierto se construye en comunidad. No necesitas ser un experto programador para aportar.</p>
+               <div class="collaborate-tags"> <span> <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Programar </span> <span> <svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Traducir </span> <span> <svg class="icon"><use href="img/icons.svg#icon-warning"></use></svg> Reportar errores </span> <span> <svg class="icon"><use href="img/icons.svg#icon-bulb"></use></svg> Proponer ideas </span>
+               </div> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary collaborate-action">Contribuir en GitHub</a>
+          </div>
+     </section>
+     <footer>
+          <div class="footer-content">
+               <p class="footer-love"> Hecho con <svg class="icon heart-icon"><use href="img/icons.svg#icon-heart"></use></svg> y código abierto desde Cuba para el mundo. </p>
+               <p class="footer-legal"> &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. BinaryQva™ es un estudio e iniciativa open source. </p>
+               <div class="footer-links"> <a href="#">Privacidad</a> <a href="#">Términos</a> <a href="mailto:tu-correo@ejemplo.com">Contacto</a> <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+               </div>
+          </div>
+     </footer>
+     <script src="js/script.js"></script>
 </body>
 </html>
