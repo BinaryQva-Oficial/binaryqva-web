@@ -19,7 +19,6 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
-     <!-- Rutas relativas corregidas -->
      <link rel="stylesheet" href="css/style.css">
      <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96"/>
      <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg"/>
@@ -30,8 +29,18 @@
 </head>
 <body>
      <header id="header">
-          <div class="nav-container"> <a href="#" class="brand"> <img src="img/logo-landscape.png" alt="BinaryQva Logo"> </a>
-               <div class="nav-actions"> <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema"> <svg class="icon sun-icon"><use href="img/icons.svg#icon-sun"></use></svg> <svg class="icon moon-icon"><use href="img/icons.svg#icon-moon"></use></svg> </button> <button class="hamburger" id="hamburger" aria-label="Abrir menú"> <svg class="icon"><use href="img/icons.svg#icon-menu"></use></svg> </button>
+          <div class="nav-container">
+               <a href="#" class="brand">
+                    <img src="img/logo-landscape.png" alt="BinaryQva Logo">
+               </a>
+               <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                         <svg class="icon sun-icon"><use href="img/icons.svg#icon-sun"></use></svg>
+                         <svg class="icon moon-icon"><use href="img/icons.svg#icon-moon"></use></svg>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                         <svg class="icon"><use href="img/icons.svg#icon-menu"></use></svg>
+                    </button>
                </div>
                <ul class="nav-links" id="nav-links">
                     <li><a href="#home">Inicio</a></li>
@@ -43,26 +52,40 @@
                </ul>
           </div>
      </header>
+
      <section class="home" id="home">
           <h1 class="fade-in">Desarrollado en Cuba, <br><span class="gradient-text">destinado para el mundo.</span></h1>
-          <div class="home-typing fade-in"> <span id="typing-text"></span><span class="cursor"></span>
+          <div class="home-typing fade-in">
+               <span id="typing-text"></span><span class="cursor"></span>
           </div>
-          <div class="btn-group fade-in"> <a href="#projects" class="btn btn-primary">Descubre lo que construimos</a> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explora nuestro código</a>
+          <div class="btn-group fade-in">
+               <a href="#projects" class="btn btn-primary">
+                    <svg class="icon"><use href="img/icons.svg#icon-sparkles"></use></svg> Descubre lo que construimos
+               </a>
+               <a href="https://github.com/JiroxDEV" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Explora nuestro código
+               </a>
           </div>
      </section>
+
      <section class="section-container" id="projects">
           <h2 class="section-title fade-in">Proyectos</h2>
           <div class="grid">
                <div class="card fade-in">
                     <h3>PreuSync™ <span class="badge badge-beta">Beta</span></h3>
-                    <p>Nuestra primera herramienta. Diseñada para resolver las necesidades de los preuniversitarios de toda Cuba con un enfoque en rendimiento, privacidad y código abierto, optimizada para dispositivos de gama baja y mala conexión a Internet.</p> <a href="https://preusync.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-card"> Leer más <svg class="icon"><use href="img/icons.svg#icon-arrow-right"></use></svg> </a>
+                    <p>Nuestra primera herramienta. Diseñada para resolver las necesidades de los preuniversitarios de toda Cuba con un enfoque en rendimiento, privacidad y código abierto, optimizada para dispositivos de gama baja y mala conexión a Internet.</p>
+                    <a href="https://preusync.onrender.com" target="_blank" rel="noopener noreferrer" class="btn-card">
+                         Leer más <svg class="icon"><use href="img/icons.svg#icon-arrow-right"></use></svg>
+                    </a>
                </div>
                <div class="card fade-in" style="opacity: 0.8;">
                     <h3>Más Proyectos <span class="badge">En desarrollo</span></h3>
-                    <p>Estamos trabajando en nuevas herramientas para expandir nuestro ecosistema. Mantente atento a nuestro GitHub.</p> <span class="coming-soon-text">Más proyectos próximamente...</span>
+                    <p>Estamos trabajando en nuevas herramientas para expandir nuestro ecosistema. Mantente atento a nuestro GitHub.</p>
+                    <span class="coming-soon-text">Más proyectos próximamente...</span>
                </div>
           </div>
      </section>
+
      <section class="section-container" id="philo">
           <h2 class="section-title fade-in">Nuestra Filosofía</h2>
           <div class="philo-grid fade-in">
@@ -80,35 +103,59 @@
                </div>
           </div>
      </section>
+
      <section class="section-container" id="about">
           <h2 class="section-title fade-in">Sobre Nosotros</h2>
           <div class="text-container fade-in">
-               <p class="about-text"> <strong>BinaryQva™</strong> es un estudio e iniciativa de software libre que opera actualmente como organización informal. Es creada y mantenida actualmente solo por JiroxDEV y los colaboradores de la iniciativa o de sus proyectos derivados. </p>
+               <p class="about-text">
+                    <strong>BinaryQva™</strong> es un estudio e iniciativa de software libre que opera actualmente como organización informal. Es creada y mantenida actualmente solo por Daniel Alejandro Pupo González (JiroxDEV) y los colaboradores de la iniciativa o de sus proyectos derivados.
+               </p>
           </div>
      </section>
+
      <section class="section-container" id="mision">
           <h2 class="section-title fade-in">Nuestra Misión</h2>
           <div class="text-container fade-in">
-               <p class="mision-text"> <strong>BinaryQva™</strong> nace con el objetivo claro de fomentar la informatización y digitalización de la vida cubana, acercando la tecnología a todos. </p>
-               <p class="mision-text"> Sin embargo, nuestros cimientos son universales. Creemos en el código abierto como un puente sin fronteras. Por eso, construimos soluciones que resuelven los retos locales, pero con una arquitectura y filosofía globales, listas para ser adoptadas por cualquier persona en el mundo. </p>
+               <p class="mision-text">
+                    <strong>BinaryQva™</strong> nace con el objetivo claro de fomentar la informatización y digitalización de la vida cubana, acercando la tecnología a todos.
+               </p>
+               <p class="mision-text">
+                    Sin embargo, nuestros cimientos son universales. Creemos en el código abierto como un puente sin fronteras. Por eso, construimos soluciones que resuelven los retos locales, pero con una arquitectura y filosofía globales, listas para ser adoptadas por cualquier persona en el mundo.
+               </p>
           </div>
      </section>
+
      <section class="section-container" id="collaborate">
           <div class="collaborate-box fade-in">
                <h2>Únete a la iniciativa</h2>
                <p>El código abierto se construye en comunidad. No necesitas ser un experto programador para aportar.</p>
-               <div class="collaborate-tags"> <span> <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Programar </span> <span> <svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Traducir </span> <span> <svg class="icon"><use href="img/icons.svg#icon-warning"></use></svg> Reportar errores </span> <span> <svg class="icon"><use href="img/icons.svg#icon-bulb"></use></svg> Proponer ideas </span>
-               </div> <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary collaborate-action">Contribuir en GitHub</a>
+               <div class="collaborate-tags">
+                    <span><svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Programar</span>
+                    <span><svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Traducir</span>
+                    <span><svg class="icon"><use href="img/icons.svg#icon-warning"></use></svg> Reportar errores</span>
+                    <span><svg class="icon"><use href="img/icons.svg#icon-bulb"></use></svg> Proponer ideas</span>
+               </div>
+               <a href="https://github.com/JiroxDEV" target="_blank" rel="noopener noreferrer" class="btn btn-primary collaborate-action">
+                    <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Contribuir en GitHub
+               </a>
           </div>
      </section>
+
      <footer>
           <div class="footer-content">
-               <p class="footer-love"> Hecho con <svg class="icon heart-icon"><use href="img/icons.svg#icon-heart"></use></svg> y código abierto desde Cuba para el mundo. </p>
-               <p class="footer-legal"> &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. BinaryQva™ es un estudio e iniciativa open source. </p>
-               <div class="footer-links"> <a href="#">Privacidad</a> <a href="#">Términos</a> <a href="mailto:tu-correo@ejemplo.com">Contacto</a> <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+               <p class="footer-love">
+                    Hecho con <svg class="icon heart-icon"><use href="img/icons.svg#icon-heart"></use></svg> y código abierto desde Cuba para el mundo.
+               </p>
+               <p class="footer-legal">
+                    &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. BinaryQva™ es un estudio e iniciativa open source.
+               </p>
+               <div class="footer-links">
+                    <a href="mailto:jiroxdev@preusync.com">Contacto</a>
+                    <a href="https://github.com/JiroxDEV" target="_blank" rel="noopener noreferrer">GitHub</a>
                </div>
           </div>
      </footer>
+
      <script src="js/script.js"></script>
 </body>
 </html>
