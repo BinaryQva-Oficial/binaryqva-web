@@ -15,6 +15,12 @@
                     document.documentElement.setAttribute('data-theme', 'dark');
                }
           })();
+
+          function copyText(text) {
+               navigator.clipboard.writeText(text).then(() => {
+                    alert('¡Copiado al portapapeles!: ' + text);
+               });
+          }
      </script>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +53,7 @@
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#philo">Filosofía</a></li>
                     <li><a href="#about">Sobre Nosotros</a></li>
-                    <li><a href="#mision">Nuestra misión</a></li>
+                    <li><a href="#donations">Donaciones</a></li>
                     <li><a href="#collaborate">Colabora</a></li>
                </ul>
           </div>
@@ -122,15 +128,66 @@
           </div>
      </section>
 
-     <section class="section-container" id="mision">
-          <h2 class="section-title fade-in">Nuestra Misión</h2>
-          <div class="text-container fade-in">
-               <p class="mision-text">
-                    <strong>BinaryQva™</strong> nace con el objetivo claro de fomentar la informatización y digitalización de la vida cubana, acercando la tecnología a todos.
-               </p>
-               <p class="mision-text">
-                    Sin embargo, nuestros cimientos son universales. Creemos en el código abierto como un puente sin fronteras. Por eso, construimos soluciones que resuelven los retos locales, pero con una arquitectura y filosofía globales, listas para ser adoptadas por cualquier persona en el mundo.
-               </p>
+     <!-- SECCIÓN MÉTODOS DE DONACIÓN Y APOYO FINANCIERO -->
+     <section class="section-container" id="donations">
+          <h2 class="section-title fade-in">Apoyo Financiero y Donaciones</h2>
+          <p class="mision-text fade-in" style="margin-bottom: 24px;">
+               Tus contribuciones nos ayudan a mantener los servidores activos, desarrollar nuevas funcionalidades y mantener la plataforma 100% libre de publicidad.
+          </p>
+          <div class="grid">
+               <!-- Zaps Bio -->
+               <div class="card fade-in">
+                    <h3>
+                         <span style="display: inline-flex; align-items: center; gap: 8px;">
+                              <svg class="icon" style="color: #eab308;"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio (Lightning / Nostr)
+                         </span>
+                    </h3>
+                    <p>Donaciones mediante Bitcoin Lightning Network y Nostr Zaps.</p>
+                    <a href="https://zaps.bio/binaryqva" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 16px;">
+                         <svg class="icon"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio
+                    </a>
+               </div>
+
+               <!-- Transfermóvil BPA -->
+               <div class="card fade-in">
+                    <h3>
+                         <span style="display: inline-flex; align-items: center; gap: 8px;">
+                              <svg class="icon" style="color: #3b82f6;"><use href="img/icons.svg#icon-card"></use></svg> Transfermóvil (CUP - BPA)
+                         </span>
+                    </h3>
+                    <p>Tarjeta BPA: <strong style="color: var(--text-main);">9205129976701558</strong></p>
+                    <button onclick="copyText('9205129976701558')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 10px 16px;">
+                         <svg class="icon"><use href="img/icons.svg#icon-copy"></use></svg> Copiar Tarjeta BPA
+                    </button>
+               </div>
+
+               <!-- USDT & Crypto -->
+               <div class="card fade-in" style="grid-column: span 1 / -1;">
+                    <h3>
+                         <span style="display: inline-flex; align-items: center; gap: 8px;">
+                              <svg class="icon" style="color: #10b981;"><use href="img/icons.svg#icon-crypto"></use></svg> Criptomonedas (USDT, SOL, TON)
+                         </span>
+                    </h3>
+                    <p>Redes soportadas para donaciones cripto en USDT, Solana y Toncoin:</p>
+                    <div style="display: flex; flex-direction: column; gap: 10px; font-family: var(--font-heading); font-size: 0.85rem;">
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>BEP20 / ERC20:</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">0x042bF7f30aF43b7A69f18F5Fd28e29179CbA8446</span></span>
+                              <button onclick="copyText('0x042bF7f30aF43b7A69f18F5Fd28e29179CbA8446')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>TRC20 (TRON):</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">TEphHAaFE3ogamr4pTZUSSzXXHR8heFHzf</span></span>
+                              <button onclick="copyText('TEphHAaFE3ogamr4pTZUSSzXXHR8heFHzf')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>Solana (SOL):</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">H8J5tCkC38hXQoNC6K6Yv8P8k5irGFA5XQiGVxyw25iR</span></span>
+                              <button onclick="copyText('H8J5tCkC38hXQoNC6K6Yv8P8k5irGFA5XQiGVxyw25iR')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>Toncoin (TON):</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">UQD31gwYfU9T8sSQ_V76htxPRm2RUVNWzb4QwEnmYmHDUSsk</span></span>
+                              <button onclick="copyText('UQD31gwYfU9T8sSQ_V76htxPRm2RUVNWzb4QwEnmYmHDUSsk')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                    </div>
+               </div>
           </div>
      </section>
 
@@ -159,7 +216,7 @@
                     &copy; 2026 <strong>Daniel Alejandro Pupo González (JiroxDEV)</strong>. BinaryQva™ es un estudio e iniciativa open source.
                </p>
                <div class="footer-links">
-                    <a href="mailto:soportebinaryqva@gmail.com">Contacto</a>
+                    <a href="mailto:jiroxdev@preusync.com">Contacto</a>
                     <a href="https://github.com/BinaryQva-Oficial" target="_blank" rel="noopener noreferrer">GitHub</a>
                </div>
           </div>
