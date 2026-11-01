@@ -63,8 +63,8 @@
   </symbol>
 
   <symbol id="icon-crypto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="12" cy="12" r="10"></circle>
-    <path d="M9.5 8.5h5a2 2 0 0 1 0 4h-5m0 0h5.5a2 2 0 0 1 0 4h-5.5V7m3 10v2m0-12v2"></path>
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M12 6v12M9 9h4.5a2.5 2.5 0 0 1 0 5H9.5a2.5 2.5 0 0 0 0 5H15"></path>
   </symbol>
 
   <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

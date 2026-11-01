@@ -152,41 +152,44 @@
                <div class="card fade-in">
                     <h3>
                          <span style="display: inline-flex; align-items: center; gap: 8px;">
-                              <svg class="icon" style="color: #eab308;"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio (Lightning / Nostr)
+                              <svg class="icon"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio (Lightning / Nostr)
                          </span>
                     </h3>
-                    <p>Donaciones mediante Bitcoin Lightning Network y Nostr Zaps.</p>
-                    <a href="https://zaps.bio/binaryqva" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 16px;">
-                         <svg class="icon"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio
+                    <p>Apoya la iniciativa a través de Bitcoin Lightning Network y Nostr Zaps de forma instantánea, con comisiones casi nulas y de manera descentralizada.</p>
+                    <a href="https://zaps.bio/binaryqva" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 16px; margin-top: auto;">
+                         <svg class="icon"><use href="img/icons.svg#icon-zap"></use></svg> Abrir Zaps Bio
                     </a>
                </div>
 
                <!-- Transfermóvil BPA -->
-               <div class="card fade-in">
-                    <h3>
+               <div class="card fade-in" style="text-align: center; align-items: center;">
+                    <h3 style="width: 100%; text-align: left;">
                          <span style="display: inline-flex; align-items: center; gap: 8px;">
-                              <svg class="icon" style="color: #3b82f6;"><use href="img/icons.svg#icon-card"></use></svg> Transfermóvil (CUP - BPA)
+                              <svg class="icon"><use href="img/icons.svg#icon-card"></use></svg> Transfermóvil (CUP - BPA)
                          </span>
                     </h3>
-                    <p>Tarjeta BPA: <strong style="color: var(--text-main);">9205129976701558</strong></p>
-                    <button onclick="copyText('9205129976701558')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 10px 16px; margin-top: 8px;">
+                    <p style="width: 100%; text-align: left; margin-bottom: 8px;">Tarjeta BPA: <strong style="color: var(--text-main);">9205129976701558</strong></p>
+
+                    <img src="img/qr-bpa.png" alt="Código QR Transfermóvil BPA" style="max-width: 150px; height: auto; border-radius: 12px; margin: 8px 0; border: 1px solid var(--border-color); background: #ffffff; padding: 4px;">
+
+                    <button onclick="copyText('9205129976701558')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 10px 16px; width: 100%;">
                          <svg class="icon"><use href="img/icons.svg#icon-copy"></use></svg> Copiar Tarjeta BPA
                     </button>
                </div>
 
-               <!-- USDT & Crypto -->
+               <!-- USDT & Crypto Networks -->
                <div class="card fade-in" style="grid-column: span 1 / -1;">
                     <h3>
                          <span style="display: inline-flex; align-items: center; gap: 8px;">
-                              <svg class="icon" style="color: #10b981;"><use href="img/icons.svg#icon-crypto"></use></svg> Donaciones USDT (Criptomonedas)
+                              <svg class="icon"><use href="img/icons.svg#icon-crypto"></use></svg> Donaciones USDT (Redes Cripto)
                          </span>
                     </h3>
-                    <p>Direcciones oficiales para donaciones en USDT en diferentes redes cripto:</p>
+                    <p>Direcciones oficiales para donaciones en la moneda estable USDT en sus diferentes redes:</p>
 
                     <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
                          <!-- USDT BEP20 -->
                          <div style="display: flex; flex-direction: column; gap: 8px; background: var(--bg-main); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
-                              <div style="display: flex; justify-content: space-between; align-items: center;">
+                              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                                    <strong style="font-size: 0.85rem; color: var(--text-main);">USDT (Red BEP20 / BNB Chain)</strong>
                                    <button onclick="copyText('0x042bF7f30aF43b7A69f18F5Fd28e29179CbA8446')" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.75rem;">
                                         <svg class="icon" style="width: 14px; height: 14px;"><use href="img/icons.svg#icon-copy"></use></svg> Copiar
@@ -197,7 +200,7 @@
 
                          <!-- USDT TRC20 -->
                          <div style="display: flex; flex-direction: column; gap: 8px; background: var(--bg-main); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
-                              <div style="display: flex; justify-content: space-between; align-items: center;">
+                              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                                    <strong style="font-size: 0.85rem; color: var(--text-main);">USDT (Red TRC20 / TRON)</strong>
                                    <button onclick="copyText('TEphHAaFE3ogamr4pTZUSSzXXHR8heFHzf')" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.75rem;">
                                         <svg class="icon" style="width: 14px; height: 14px;"><use href="img/icons.svg#icon-copy"></use></svg> Copiar
@@ -208,7 +211,7 @@
 
                          <!-- USDT ERC20 -->
                          <div style="display: flex; flex-direction: column; gap: 8px; background: var(--bg-main); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
-                              <div style="display: flex; justify-content: space-between; align-items: center;">
+                              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                                    <strong style="font-size: 0.85rem; color: var(--text-main);">USDT (Red ERC20 / Ethereum)</strong>
                                    <button onclick="copyText('0x042bF7f30aF43b7A69f18F5Fd28e29179CbA8446')" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.75rem;">
                                         <svg class="icon" style="width: 14px; height: 14px;"><use href="img/icons.svg#icon-copy"></use></svg> Copiar
@@ -219,7 +222,7 @@
 
                          <!-- USDT SOL -->
                          <div style="display: flex; flex-direction: column; gap: 8px; background: var(--bg-main); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
-                              <div style="display: flex; justify-content: space-between; align-items: center;">
+                              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                                    <strong style="font-size: 0.85rem; color: var(--text-main);">USDT (Red SOL / Solana)</strong>
                                    <button onclick="copyText('H8J5tCkC38hXQoNC6K6Yv8P8k5irGFA5XQiGVxyw25iR')" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.75rem;">
                                         <svg class="icon" style="width: 14px; height: 14px;"><use href="img/icons.svg#icon-copy"></use></svg> Copiar
@@ -230,7 +233,7 @@
 
                          <!-- USDT TON -->
                          <div style="display: flex; flex-direction: column; gap: 8px; background: var(--bg-main); padding: 14px; border-radius: 12px; border: 1px solid var(--border-color);">
-                              <div style="display: flex; justify-content: space-between; align-items: center;">
+                              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                                    <strong style="font-size: 0.85rem; color: var(--text-main);">USDT (Red TON / Toncoin)</strong>
                                    <button onclick="copyText('UQD31gwYfU9T8sSQ_V76htxPRm2RUVNWzb4QwEnmYmHDUSsk')" class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.75rem;">
                                         <svg class="icon" style="width: 14px; height: 14px;"><use href="img/icons.svg#icon-copy"></use></svg> Copiar
